@@ -209,6 +209,8 @@ footer {
 }
 
 .about-image {
+  max-width: 100;
+  height:auto;
   flex: 1;
 }
 
@@ -410,3 +412,60 @@ footer {
   color: #fff;
 }
 
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .navbar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .navbar nav a {
+    font-size: 15px;
+  }
+
+  .navbar .btn {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  /* Hero Text */
+  .hero-text h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .hero-text p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  /* Sections padding */
+  section {
+    padding: 50px 20px;
+  }
+
+  /* Cards grid */
+  .product-grid,
+  .why-grid,
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card img,
+  .review img {
+    max-width: 100%;
+  }
+}
