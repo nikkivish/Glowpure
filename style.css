@@ -195,3 +195,8 @@ footer {
   text-align: center;
   padding: 15px;
 }
+#men{
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+}
