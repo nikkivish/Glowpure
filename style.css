@@ -6,8 +6,8 @@
 }
 
 body {
-  background: #f9fdf6;
-  color: #333;
+  background:#F3F6F1; ;
+  color:#1B1B1B;
 }
 
 .front {
@@ -35,6 +35,9 @@ body {
   align-items: center;
   padding: 20px 60px;
   animation: drop 1s ease;
+  background: #2e6b3f;
+  color: #fff;
+  height: 54px;
 }
 
 @keyframes drop {
@@ -50,6 +53,9 @@ body {
 
 .logo {
   color: #5a8f3d;
+  width: 95px;
+  height: 25px;
+  border-radius: 7%;
 }
 
 nav a {
@@ -63,7 +69,7 @@ nav a:hover {
 }
 
 .btn {
-  background: #2e4f1c;
+  background: #81cf56;
   color: white;
   border: none;
   padding: 8px 16px;
@@ -91,7 +97,6 @@ nav a:hover {
     transform: translateX(0);
   }
 }
-
 .hero-text h2 {
   font-size: 42px;
   color: #1c3310;
@@ -408,7 +413,7 @@ footer {
 .footer {
   text-align: center;
   padding: 20px;
-  background: #1f3d2b;
+  background:#1f3d2b;
   color: #fff;
 }
 
@@ -425,7 +430,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
   .navbar nav a {
@@ -451,8 +456,6 @@ footer {
     font-size: 15px;
     text-align: center;
   }
-
-  /* Sections padding */
   section {
     padding: 50px 20px;
   }
@@ -468,4 +471,123 @@ footer {
   .review img {
     max-width: 100%;
   }
+}
+.card .p-btn{
+  cursor:pointer;
+  transition: .5s ease-out;
+}
+.card .p-btn:hover{
+  background-color: #d2d9d2;
+}  
+/* Yaha se cart */
+#cartval{
+  position: absolute;
+  top:25px;          
+  right: 60px;       
+  background: red;
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.adcart{
+  background-color: #2e6b3f;
+  color: #1B1B1B;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  gap:1rem;
+  justify-content: space-between;
+}
+#cartval2{
+  background-color:whitesmoke;
+  height:25px;
+  width:25px;
+  border-radius: 50%;
+  text-align: center;
+}
+.cartitem{
+  padding: 20px 50px;
+}
+.emptycrt{
+  height: 550px;
+  width: 770px;
+  margin-left: 17rem;
+  text-align: center;
+  box-shadow:rgba(0,0, 0, 0.16) 0px 1px 4px;
+}
+.shoppingcart .cartitem{
+  display: flex;
+  font-family: 'Times New Roman', Times, serif;
+  justify-content: space-around;
+  align-items:center;
+  margin:20px 0;
+  margin-left:1rem;
+  margin-right:1rem;
+  box-shadow:rgba(0,0, 0, 0.16) 0px 1px 4px;
+}
+.pname{
+  font-family: 'Times New Roman', serif;
+}
+.remove{
+  width:100px;
+  padding:5px;
+  border-radius:5%;
+  border: none;
+  color:white;
+  font-family:'Times New Roman', serif;
+  background-color: #5a8f3d;
+  font-size: 15px;
+}
+.remove:hover{
+  background-color: #0b2806;
+}
+.label{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #959da1;
+}
+.uptbtn{
+  cursor: pointer;
+  padding: 6px 14px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size:15px;
+  font-weight:bold;
+  background-color:rgb(23, 176, 56);
+  border:none;
+  color:#000;
+  border-radius:25px;
+}
+.uptbtn:hover{
+  background-color: #42b864;
+}
+.checkout-btn{
+  cursor: pointer;
+  padding: 12px 28px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size:15px;
+  font-weight:bold;
+  background-color:rgb(23, 176, 56);
+  border:none;
+  color:#000;
+  border-radius:25px;
+}
+.checkout-btn:hover{
+  background-color: #3da48c;
+}
+.chkbtn{
+  background-color:#F3F6F1;
+  padding:10px;
+  display:flex;
+  justify-content:end;
 }
