@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 50px;
+  background: #f6faf4;
+}
+
+.app {
+  max-width: 500px;
+  margin: auto;
+  padding-bottom: 90px;
+  background: #d2d9d2;
+  border-radius: 12px;
+}
+
+/* Product Image Card */
+.product-card {
+  background: #d2d9d2;
+  border-radius: 25px;
+  padding: 12px;
+  margin: 20px;
+  position: relative;
+}
+
+.product-img {
+  width: 100%;
+  border-radius: 20px;
+  max-height: 400px;
+}
+
+.tag {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Info Section */
+.info {
+  padding: 20px;
+}
+
+.badge {
+  color: #23c552;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: 28px;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.old {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.save {
+  background: #d7f5e2;
+  color: #1c9c50;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.rating {
+  margin: 10px 0 20px;
+  color: #f5b400;
+}
+
+.rating span {
+  color: gray;
+  font-size: 13px;
+}
+
+/* Ingredients */
+.ingredients {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.ing {
+  text-align: center;
+}
+
+.ing p {
+  font-size: 12px;
+}
+
+/* Description */
+.desc {
+  color: #555;
+  line-height: 1.6;
+}
+
+.features li {
+  margin: 8px 0;
+  color: #1c9c50;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+  bottom: 0;
+  width: 100%;
+  max-width: 220px;
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  gap: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.buy-btn {
+  flex: 1;
+  background: #2e4f1c;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  margin: 20px;
+  width: 96px;
+}
+.cart-btn {
+  background: #2e4f1c;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  margin: 20px;
+}

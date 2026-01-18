@@ -1,149 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>GlowPure | Skincare</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>GlowPure | Skincare</title>
+    <!-- ===== Navbar ===== -->
+    <div class="nav">
+      <header class="navbar">
+        <img class="logo" src="logo.png" />
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="#">Products</a>
+          <a href="#">About us</a>
+          <a href="#">Contact</a>
+          <span id="navUser"></span>
+        </nav>
+      </header>
+    </div>
+    <!-- ===== Hero Section ===== -->
 
-        <!-- Google Font -->
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-          rel="stylesheet"
-        />
+    <div class="hero">
+      <div class="hero-text-box">
+        <h1>
+          Glow Naturally, Pure Care for Glowing Skin<br />
+          <hr />
+          <span
+            >Feel Beautiful Everyday! ✨<br />
+            Pure Care for Glowing Skin
+          </span>
+        </h1>
 
-        <link rel="stylesheet" href="style.css" />
-      </head>
-      <body>
-        <!-- ===== Navbar ===== -->
-        <div class="front">
-          <header class="navbar">
-            <img class="logo" src="logo.png"></img>
-            <nav>
-              <a href="index.html">Home</a>
-              <a href="#">Products</a>
-              <a href="#">About us</a>
-              <a href="#">Contact</a>
-              <button class="btn">Shop Now</button>
-            </nav>
-          </header>
+        <p>
+          Herbal skincare made with pure ingredients for healthy, radiant skin.
+        </p>
+        <div class="hero-tags">
+          🌿 100% Natural &nbsp; | &nbsp; 🩺 Dermatologist Tested &nbsp; |
+          &nbsp; 🚚 Free Delivery
+        </div>
+        <div class="hero-buttons">
+          <button class="btn-primary">Shop Now</button>
+        </div>
+      </div>
+    </div>
+    <!-- ===== Best Sellers ===== -->
+    <section class="products">
+      <h2 class="section-tittle">Best Sellers</h2>
 
-          <!-- ===== Hero Section ===== -->
-          <section class="hero">
-            <div class="hero-text">
-              <h2>Pure Care for Glowing Skin</h2>
-              <p>Natural & effective skincare solutions</p>
-              <button class="btn">Shop Now</button>
-            </div>
-          </section>
+      <div class="product-grid">
+        <div class="card">
+          <img src="p1.png" />
+          <h3>Aloe Vera Face Wash</h3>
+          <p>$18</p>
+          <button><a href="product1.html"> Buy Now</a></button>
         </div>
 
-        <!-- ===== Best Sellers ===== -->
-        <section class="products">
-          <h2  class="section-tittle">Best Sellers</h2>
+        <div class="card">
+          <img src="p2.png" />
+          <h3>Vitamin C Serum</h3>
+          <p>$25</p>
+          <button><a href=""> Buy Now</a></button>
+        </div>
 
-          <div class="product-grid">
-            <div class="card">
-              <img src="p1.png" />
-              <h3>Aloe Vera Face Wash</h3>
-              <p>$18</p>
-              <button>Buy Now</button>
-            </div>
+        <div class="card">
+          <img src="p3.png" />
+          <h3>Hydrating Moisturizer</h3>
+          <p>$22</p>
+          <button><a href="">Buy Now</a></button>
+        </div>
 
-            <div class="card">
-              <img src="p2.png" />
-              <h3>Vitamin C Serum</h3>
-              <p>$25</p>
-              <button>Buy Now</button>
-            </div>
+        <div class="card">
+          <img src="p4.png" />
+          <h3>Mineral Sunscreen</h3>
+          <p>$20</p>
+          <button><a href="">Buy Now</a></button>
+        </div>
+      </div>
+    </section>
+    <!-- ===== Why Choose Us ===== -->
+    <section class="why">
+      <h2 class="section-tittle">Why Choose GlowPure?</h2>
 
-            <div class="card">
-              <img src="p3.png" />
-              <h3>Hydrating Moisturizer</h3>
-              <p>$22</p>
-              <button>Buy Now</button>
-            </div>
+      <div class="why-grid">
+        <div>
+          <img src="cw1.png" alt="" srcset="" />
 
-            <div class="card">
-              <img src="p4.png" />
-              <h3>Mineral Sunscreen</h3>
-              <p>$20</p>
-              <button>Buy Now</button>
-            </div>
-          </div>
-        </section>
+          <h3>🌿 100% Natural</h3>
+          <p>Made with organic ingredients</p>
+        </div>
+        <div>
+          <img src="cw2.png" alt="" srcset="" />
+          <h3>🐰 Cruelty-Free</h3>
+          <p>No animal testing</p>
+        </div>
+        <div>
+          <img src="cw3.png" alt="" />
+          <h3>🩺 Dermatologist Tested</h3>
+          <p>Safe for all skin types</p>
+        </div>
+      </div>
+    </section>
+    <!-- slider -->
 
-        <!-- ===== Why Choose Us ===== -->
-        <section class="why">
-          <h2 class="section-tittle">Why Choose GlowPure?</h2>
+    <!-- ===== Reviews ===== -->
+    <section class="reviews">
+      <h2 class="section-tittle">Customer Reviews</h2>
 
-          <div class="why-grid">
-            <div>
-              <img src="cw1.png" alt="" srcset="">
+      <div class="review-grid">
+        <div class="review">
+          <img src="customer1.jpg" alt="" />
+          <p>⭐⭐⭐⭐⭐</p>
+          <p>"My skin has never felt better!"</p>
+          <h4>- Emily R.</h4>
+        </div>
 
-              <h3>🌿 100% Natural</h3>
-              <p>Made with organic ingredients</p>
-            </div>
-            <div>
-              <img src="cw2.png" alt="" srcset="">
-              <h3>🐰 Cruelty-Free</h3>
-              <p>No animal testing</p>
-            </div>
-            <div>
-              <img src="cw3.png" alt="">
-              <h3>🩺 Dermatologist Tested</h3>
-              <p>Safe for all skin types</p>
-            </div>
-          </div>
-        </section>
+        <div class="review">
+          <img src="customer2.jpg" alt="" srcset="" />
+          <p>⭐⭐⭐⭐⭐</p>
+          <p>"Highly recommend GlowPure products."</p>
+          <h4>- Sarah M.</h4>
+        </div>
 
-        <!-- ===== Reviews ===== -->
-        <section class="reviews">
-          <h2 class="section-tittle">Customer Reviews</h2>
+        <div class="review">
+          <img src="customer3.jpg" alt="" srcset="" />
+          <p>⭐⭐⭐⭐⭐</p>
+          <p>"Best natural skincare brand."</p>
+          <h4>- Jessica L.</h4>
+        </div>
+        <div class="review">
+          <img src="customer4.jpg" alt="" srcset="" />
+          <p>⭐⭐⭐⭐⭐</p>
+          <p>"I love how gentle GlowPure products are on my sensitive skin."</p>
+          <h4>— Ananya K.</h4>
+        </div>
+      </div>
+    </section>
+    <!-- Signup Popup Modal -->
+    <div id="signupModal" class="modal" onclick="outsideClick(event)">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>Join GlowPure 🌿</h2>
+        <p>Sign up now and get natural glow tips & offers!</p>
+        <div class="popup-buttons">
+          <button class="signup-btn" onclick="goToSignup()">Sign Up</button>
+        </div>
+      </div>
+    </div>
 
-          <div class="review-grid">
-            <div class="review">
-              <img src="customer1.jpg" alt="">
-              <p>⭐⭐⭐⭐⭐</p>
-              <p>"My skin has never felt better!"</p>
-              <h4>- Emily R.</h4>
-            </div>
+    <!-- ===== Footer ===== -->
+    <footer>
+      <p>© 2026 GlowPure. All rights reserved.</p>
+    </footer>
 
-            <div class="review">
-              <img src="customer2.jpg" alt="" srcset="">
-              <p>⭐⭐⭐⭐⭐</p>
-              <p>"Highly recommend GlowPure products."</p>
-              <h4>- Sarah M.</h4>
-            </div>
-
-            <div class="review">
-              <img src="customer3.jpg" alt="" srcset="">
-              <p>⭐⭐⭐⭐⭐</p>
-              <p>"Best natural skincare brand."</p>
-              <h4>- Jessica L.</h4>
-            </div>
-            <div class="review">
-              <img src="customer4.jpg" alt="" srcset="">
-              <p>⭐⭐⭐⭐⭐</p>
-              <p>"I love how gentle GlowPure products are on my sensitive skin."</p>
-              <h4>— Ananya K.</h4>
-            </div>
-          </div>
-        </section>
-
-        <!-- ===== Footer ===== -->
-        <footer>
-          <p>© 2026 GlowPure. All rights reserved.</p>
-        </footer>
-      </body>
-    </html>
+    <script src="script.js"></script>
   </body>
 </html>
