@@ -23,7 +23,11 @@
           <a href="#">Products</a>
           <a href="#">About us</a>
           <a href="#">Contact</a>
+          <a href="men.html">Men</a>
           <span id="navUser"></span>
+
+          <a href="cart.html" class="cart">🛒</a>
+          <p id="cartval">0</p>
         </nav>
       </header>
     </div>
@@ -61,28 +65,49 @@
           <img src="p1.png" />
           <h3>Aloe Vera Face Wash</h3>
           <p>$18</p>
-          <button><a href="product1.html"> Buy Now</a></button>
+          <button
+            class="p-btn"
+            onclick="addInCart('p1.png', 'Aloe Vera Face Wash', 18)"
+          >
+            Buy Now
+          </button>
         </div>
 
         <div class="card">
           <img src="p2.png" />
           <h3>Vitamin C Serum</h3>
           <p>$25</p>
-          <button><a href=""> Buy Now</a></button>
+          <button
+            class="p-btn"
+            onclick="addInCart('p2.png', 'Vitamin C Serum', 25)"
+          >
+            Buy Now
+          </button>
         </div>
 
         <div class="card">
           <img src="p3.png" />
           <h3>Hydrating Moisturizer</h3>
           <p>$22</p>
-          <button><a href="">Buy Now</a></button>
+
+          <button
+            class="p-btn"
+            onclick="addInCart('p3.png', 'Hydrating Moisturizer', 22)"
+          >
+            Buy Now
+          </button>
         </div>
 
         <div class="card">
           <img src="p4.png" />
           <h3>Mineral Sunscreen</h3>
           <p>$20</p>
-          <button><a href="">Buy Now</a></button>
+          <button
+            class="p-btn"
+            onclick="addInCart('p4.png', 'Mineral Sunscreen', 20)"
+          >
+            Buy Now
+          </button>
         </div>
       </div>
     </section>
