@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Products | GlowPure</title>
+    <link rel="stylesheet" href="product.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <header class="navbar">
+        <img class="logo" src="logo.png" />
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="#">Products</a>
+          <a href="about.html">About us</a>
+          <a href="#">Contact</a>
+          <a href="men.html">Men</a>
+          <span id="navUser"></span>
+
+          <a href="cart.html" class="cart">🛒</a>
+          <p id="cartval">0</p>
+        </nav>
+      </header>
+    </div>
+    <!-- Header -->
+    <header class="top-bar">
+      <h2>Our Natural Products 🌿</h2>
+
+      <div class="offer-bar">
+        <div class="offer-track">
+          <span>🌿 Flat 20% Off on All Products</span>
+          <span>🚚 Free Delivery Above ₹499</span>
+          <span>🎁 Free Face Mask on Orders Above ₹999</span>
+          <span>✨ New Herbal Collection Launched</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Products Section -->
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search products..."
+        onkeyup="searchProducts()"
+      />
+    </div>
+
+    <div class="filter-buttons">
+      <button class="active" onclick="filterProduct('all')">All</button>
+      <button onclick="filterProduct('face')">Face</button>
+      <button onclick="filterProduct('serum')">Serum</button>
+      <button onclick="filterProduct('cleanser')">Cleanser</button>
+      <button onclick="filterProduct('lipbalm')">Lipbaim</button>
+
+      <button onclick="filterProduct('toner')">Toner</button>
+    </div>
+
+    <section class="products-container">
+      <div class="product-card" data-category="face">
+        <a href="product1.html" class="product-link"></a>
+        <img src="p1.png" alt="" />
+        <h3>Aloe Vera Face Wash</h3>
+        <p class="price">₹299</p>
+        <button onclick="location.href = 'product1.html'">View Product</button>
+      </div>
+
+      <div class="product-card" data-category="serum">
+        <img src="p2.png" alt="" />
+        <h3>Vitamin C Serum</h3>
+        <p class="price">₹499</p>
+        <button onclick="location.href = 'product2.html'">View Product</button>
+      </div>
+
+      <div class="product-card" data-category="cleanser">
+        <img src="p3.png" alt="" />
+        <h3>Hydrating Cleanser</h3>
+        <p class="price">₹399</p>
+        <button onclick="location.href = 'product3.html'">View Product</button>
+      </div>
+
+      <div class="product-card" data-category="face">
+        <img src="p4.png" alt="" />
+        <h3>Radiance Facial Cream</h3>
+        <p class="price">₹599</p>
+        <button onclick="location.href = 'product4.html'">View Product</button>
+      </div>
+      <div class="product-card" data-category="cleanser">
+        <img src="p5.jpg" alt="" />
+        <h3>Oil Control Daily Exfoliating Cleanser</h3>
+        <p class="price">₹599</p>
+        <button>View Product</button>
+      </div>
+      <div class="product-card" data-category="face">
+        <img src="p6.jpg" alt="" />
+        <h3>Barrier Care Cream</h3>
+        <p class="price">₹599</p>
+        <button>View Product</button>
+      </div>
+      <div class="product-card" data-category="lipbalm">
+        <img src="p7.jpg" alt="" />
+        <h3>Vitamin Infused Peptide lipbalm</h3>
+        <p class="price">₹599</p>
+        <button>View Product</button>
+      </div>
+      <div class="product-card" data-category="toner">
+        <img src="p8.jpg" alt="" />
+        <h3>Hydrating Ceramide Toner Essence</h3>
+        <p class="price">₹599</p>
+        <button>View Product</button>
+      </div>
+    </section>
+    <footer>
+      <p>© 2026 GlowPure. All rights reserved.</p>
+    </footer>
+    <script>
+      let selectedCategory = "all";
+
+      function filterProduct(category) {
+        selectedCategory = category;
+        applyFilters();
+
+        const buttons = document.querySelectorAll(".filter-buttons button");
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        event.target.classList.add("active");
+      }
+
+      function searchProducts() {
+        applyFilters();
+      }
+
+      function applyFilters() {
+        const searchValue = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const cards = document.querySelectorAll(".product-card");
+
+        cards.forEach((card) => {
+          const name = card.querySelector("h3").innerText.toLowerCase();
+          const category = card.dataset.category;
+
+          const matchCategory =
+            selectedCategory === "all" || category === selectedCategory;
+          const matchSearch = name.includes(searchValue);
+
+          if (matchCategory && matchSearch) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
