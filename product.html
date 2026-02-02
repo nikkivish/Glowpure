@@ -2,20 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Products | GlowPure</title>
-    <link rel="stylesheet" href="product.css" />
+
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="product.css" />
   </head>
   <body>
     <div class="nav">
       <header class="navbar">
         <img class="logo" src="logo.png" />
-        <nav>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="nav-links" id="mobileMenu">
           <a href="index.html">Home</a>
-          <a href="#">Products</a>
+          <a href="product.html">Products</a>
           <a href="about.html">About us</a>
           <a href="contact.html">Contact</a>
           <a href="men.html">Men</a>
+
           <span id="navUser"></span>
 
           <a href="cart.html" class="cart">🛒</a>
@@ -49,10 +60,10 @@
 
     <div class="filter-buttons">
       <button class="active" onclick="filterProduct('all')">All</button>
-      <button onclick="filterProduct('face')">Face</button>
-      <button onclick="filterProduct('serum')">Serum</button>
-      <button onclick="filterProduct('cleanser')">Cleanser</button>
-      <button onclick="filterProduct('lipbalm')">Lipbalm</button>
+      <button onclick="filterProduct('face', event)">Face</button>
+      <button onclick="filterProduct('serum', event)">Serum</button>
+      <button onclick="filterProduct('cleanser', event)">Cleanser</button>
+      <button onclick="filterProduct('lipbalm', event)">Lipbalm</button>
 
       <button onclick="filterProduct('toner')">Toner</button>
     </div>
@@ -117,7 +128,7 @@
     <script>
       let selectedCategory = "all";
 
-      function filterProduct(category) {
+      function filterProduct(category, event) {
         selectedCategory = category;
         applyFilters();
 
@@ -145,11 +156,14 @@
           const matchSearch = name.includes(searchValue);
 
           if (matchCategory && matchSearch) {
-            card.style.display = "block";
+            card.style.display = "";
           } else {
             card.style.display = "none";
           }
         });
+      }
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("active");
       }
     </script>
   </body>

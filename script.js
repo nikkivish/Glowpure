@@ -65,24 +65,25 @@ let calculate = () => {
   cartval.innerHTML = cart_amount;
 };
 
- const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("navLinks");
+// const hamburger = document.getElementById("hamburger");
+// const navLinks = document.getElementById("navLinks");
 
-hamburger.addEventListener("click", (e) => {
-  e.stopPropagation();
-  navLinks.classList.toggle("active");
-});
+// hamburger.addEventListener("click", (e) => {
+//   e.stopPropagation();
+//   navLinks.classList.toggle("active");
+// });
 
-document.addEventListener("click", (e) => {
-  if (!navLinks.contains(e.target)) {
-    navLinks.classList.remove("active");
-  }
-});
+// document.addEventListener("click", (e) => {
+//   if (!navLinks.contains(e.target)) {
+//     navLinks.classList.remove("active");
+//   }
+// });
 
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 600) {
-    navLinks.classList.remove("active");
-  }
-});
-
-  
+// window.addEventListener("resize", () => {
+//   if (window.innerWidth > 600) {
+//     navLinks.classList.remove("active");
+//   }
+// });
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("active");
+}

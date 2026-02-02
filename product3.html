@@ -15,15 +15,25 @@
     <!-- Navbar -->
     <div class="nav">
       <header class="navbar">
-        <img class="logo" src="logo.png" alt="GlowPure" />
+        <img class="logo" src="logo.png" />
 
-        <nav id="navLinks">
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="nav-links" id="mobileMenu">
           <a href="index.html">Home</a>
-          <a href="#">Products</a>
+          <a href="product.html">Products</a>
           <a href="about.html">About us</a>
-          <a href="#">Contact</a>
+          <a href="contact.html">Contact</a>
           <a href="men.html">Men</a>
+
+          <span id="navUser"></span>
+
           <a href="cart.html" class="cart">🛒</a>
+          <p id="cartval">0</p>
         </nav>
       </header>
     </div>
@@ -60,5 +70,10 @@
     <footer>
       <p>© 2026 GlowPure. All rights reserved.</p>
     </footer>
+    <script>
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("active");
+      }
+    </script>
   </body>
 </html>
