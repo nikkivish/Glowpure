@@ -1,0 +1,88 @@
+// Get user from localStorage
+const user = JSON.parse(localStorage.getItem("glowpureUser"));
+const navUser = document.getElementById("navUser");
+
+/* ===== NAVBAR PROFILE ===== */
+if (user) {
+  navUser.innerHTML = `
+    <div class="profile-wrapper" onclick="toggleDropdown()">
+      <span class="profile-name">👤 ${user.name}</span>
+      <div class="profile-dropdown" id="profileDropdown">
+        <p onclick="logout()">Logout</p>
+      </div>
+    </div>
+  `;
+} else {
+  navUser.innerHTML = `<a href="signup.html">Sign Up</a>`;
+}
+
+/* ===== SIGNUP POPUP (ONLY IF NOT LOGGED IN) ===== */
+if (!user) {
+  setTimeout(() => {
+    const modal = document.getElementById("signupModal");
+    if (modal) modal.style.display = "flex";
+  }, 5000);
+}
+
+/* ===== MODAL FUNCTIONS ===== */
+function closeModal() {
+  document.getElementById("signupModal").style.display = "none";
+}
+
+function goToSignup() {
+  window.location.href = "signup.html";
+}
+
+function outsideClick(e) {
+  if (e.target.id === "signupModal") closeModal();
+}
+
+/* ===== PROFILE DROPDOWN ===== */
+function toggleDropdown() {
+  const drop = document.getElementById("profileDropdown");
+  drop.style.display = drop.style.display === "block" ? "none" : "block";
+}
+
+/* ===== LOGOUT ===== */
+function logout() {
+  localStorage.removeItem("glowpureUser");
+  window.location.reload();
+}
+// cart section
+let cart = JSON.parse(localStorage.getItem("data")) || [];
+let addInCart = (img, name, price) => {
+  cart.push({
+    img: img,
+    name: name,
+    price: price,
+  });
+  localStorage.setItem("data", JSON.stringify(cart));
+  calculate();
+};
+let calculate = () => {
+  let cart_icon = document.getElementById("cartval");
+  let cart_amount = cart.length;
+  cartval.innerHTML = cart_amount;
+};
+
+ const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", (e) => {
+  e.stopPropagation();
+  navLinks.classList.toggle("active");
+});
+
+document.addEventListener("click", (e) => {
+  if (!navLinks.contains(e.target)) {
+    navLinks.classList.remove("active");
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 600) {
+    navLinks.classList.remove("active");
+  }
+});
+
+  

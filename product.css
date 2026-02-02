@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f6fbf4;
+}
+
+/* Header */
+
+.top-bar {
+  background: linear-gradient(to right, #1f3d2b, #2e6b3f);
+  padding: 100px;
+  text-align: center;
+  color: #ffffff;
+  height: 200px;
+}
+
+.top-bar h2 {
+  font-size: 32px;
+}
+
+.top-bar p {
+  margin-top: 10px;
+}
+.offer-bar {
+  margin-top: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.offer-track {
+  display: inline-block;
+  animation: moveText 18s linear infinite;
+}
+
+.offer-track span {
+  margin: 0 40px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+@keyframes moveText {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Products Grid */
+
+.products-container {
+  max-width: 1300px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  justify-content: center;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+/* Product Card */
+
+.product-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  color: #1f3d2b;
+}
+
+.price {
+  color: #4d7c4a;
+  font-weight: bold;
+}
+
+.product-card button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: #4f7f3a;
+  color: white;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background: #2f5f2f;
+}
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.search-box {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.search-box input {
+  width: 280px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #a6c79a;
+  outline: none;
+}
+
+.filter-buttons {
+  text-align: center;
+  margin: 40px 0 10px;
+}
+
+.filter-buttons button {
+  padding: 10px 22px;
+  margin: 5px;
+  border: none;
+  border-radius: 25px;
+  background: #cfe2c3;
+  cursor: pointer;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background: #4f7f3a;
+  color: white;
+}
