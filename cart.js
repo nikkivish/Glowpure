@@ -3,76 +3,66 @@ let shopcrt = document.getElementById("shoppingcart");
 let cart = JSON.parse(localStorage.getItem("data")) || [];
 
 let calculate = () => {
-    let cartcon = document.getElementById("cartval2");
-    cartcon.innerHTML = cart.length;
+  let cartcon = document.getElementById("cartval2");
+  cartcon.innerHTML = cart.length;
 };
 
 let generatestore = () => {
-    if (cart.length !== 0) {
-        shopcrt.innerHTML = cart
-            .map((x) => {
-                let { img, name, price } = x;
-                return `
+  if (cart.length !== 0) {
+    shopcrt.innerHTML = cart
+      .map((x) => {
+        let { img, name, price } = x;
+        return `
                 <div class="cartitem">
                 <img src="logo.png">
                     <p class="pname">${name}</p>
                     <div class="cartimg">
                     <img width=100px src="${img}">
                     </div>
-<<<<<<< HEAD
-                    <p class="cartprice">$${price}</p>
-=======
                     <p class="cartprice">₹${price}</p>
->>>>>>> 61f753c9788511270752a4e8ef6b62df558ea531
                     <button class="remove" onclick="removebtn('${name}')">Remove</button>
                 </div>
                 `;
-            })
-            .join("");
+      })
+      .join("");
     Total();
-    } 
-  else {
+  } else {
     shopcrt.innerHTML = `
         <div class="empty-cart">
             <img src="emptycart.jpg" class="emptycrt">
             <p class="label">Cart is empty</p>
         </div>
     `;
-}    
+  }
 };
 
-let removebtn = (name)=>{
-    cart=cart.filter((x)=> x.name != name);
-    localStorage.setItem('data',JSON.stringify(cart));
-    calculate();
-    generatestore();
-}
+let removebtn = (name) => {
+  cart = cart.filter((x) => x.name != name);
+  localStorage.setItem("data", JSON.stringify(cart));
+  calculate();
+  generatestore();
+};
 let Total = () => {
-    let totalamount = 0;
+  let totalamount = 0;
 
-    cart.forEach((item) => {
-        totalamount += item.price;
-    });
+  cart.forEach((item) => {
+    totalamount += item.price;
+  });
 
-    document.querySelector(".label").innerHTML = `
+  document.querySelector(".label").innerHTML = `
         <h3>Total amount: $${totalamount}</h3><div class="chkbtn">
         <button class="checkout-btn" onclick="checkout()">Checkout</button></div>
     `;
 };
-<<<<<<< HEAD
-
-calculate();
-generatestore();
-=======
 function addInCart(img, name, price) {
   let cart = JSON.parse(localStorage.getItem("data")) || [];
 
   cart.push({
     img: img,
     name: name,
-    price: price
+    price: price,
   });
- updateCartValue();
+  updateCartValue();
   localStorage.setItem("data", JSON.stringify(cart));
 }
 function checkout() {
@@ -81,8 +71,3 @@ function checkout() {
 
 calculate();
 generatestore();
-
-
->>>>>>> 61f753c9788511270752a4e8ef6b62df558ea531
-    
-

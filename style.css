@@ -69,18 +69,12 @@ nav span {
 
   margin: 10px;
 }
-<<<<<<< HEAD
 .nav-links {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-=======
-.items {
-  display: flex;
-}
->>>>>>> 61f753c9788511270752a4e8ef6b62df558ea531
 nav a:hover {
   text-decoration: underline;
 }
@@ -809,16 +803,10 @@ footer {
   }
 
   .hamburger span {
-<<<<<<< HEAD
     width: 24px;
     height: 3px;
     background: #2f5d2f;
 
-=======
-    width: 22px;
-    height: 2px;
-    background: #1f3d2b;
->>>>>>> 61f753c9788511270752a4e8ef6b62df558ea531
     border-radius: 2px;
   }
   .hamburger span {
@@ -836,7 +824,6 @@ footer {
     width: 20px;
     font-size: 12px;
   }
-<<<<<<< HEAD
   .nav-links {
     display: none;
     position: fixed;
@@ -855,10 +842,6 @@ footer {
   }
 
   /* .nav-links {
-=======
-
-  .nav-links {
->>>>>>> 61f753c9788511270752a4e8ef6b62df558ea531
     display: none !important;
     position: fixed;
     top: 70px;
@@ -873,11 +856,7 @@ footer {
     border-radius: 16px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
     z-index: 9999;
-<<<<<<< HEAD
   } */
-=======
-  }
->>>>>>> 61f753c9788511270752a4e8ef6b62df558ea531
   .nav-links a {
     font-size: 14px;
     letter-spacing: 0.3px;
@@ -1019,7 +998,6 @@ footer {
     text-align: center;
   }
 }
-<<<<<<< HEAD
 @media (min-width: 601px) {
   .hamburger {
     display: none;
@@ -1029,5 +1007,3 @@ footer {
     display: flex;
   }
 }
-=======
->>>>>>> 61f753c9788511270752a4e8ef6b62df558ea531
