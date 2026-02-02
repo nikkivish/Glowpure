@@ -19,7 +19,11 @@ let generatestore = () => {
                     <div class="cartimg">
                     <img width=100px src="${img}">
                     </div>
+<<<<<<< HEAD
                     <p class="cartprice">$${price}</p>
+=======
+                    <p class="cartprice">₹${price}</p>
+>>>>>>> 61f753c9788511270752a4e8ef6b62df558ea531
                     <button class="remove" onclick="removebtn('${name}')">Remove</button>
                 </div>
                 `;
@@ -55,8 +59,30 @@ let Total = () => {
         <button class="checkout-btn" onclick="checkout()">Checkout</button></div>
     `;
 };
+<<<<<<< HEAD
 
 calculate();
 generatestore();
+=======
+function addInCart(img, name, price) {
+  let cart = JSON.parse(localStorage.getItem("data")) || [];
+
+  cart.push({
+    img: img,
+    name: name,
+    price: price
+  });
+ updateCartValue();
+  localStorage.setItem("data", JSON.stringify(cart));
+}
+function checkout() {
+  window.location.href = "payment.html";
+}
+
+calculate();
+generatestore();
+
+
+>>>>>>> 61f753c9788511270752a4e8ef6b62df558ea531
     
 

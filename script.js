@@ -65,6 +65,7 @@ let calculate = () => {
   cartval.innerHTML = cart_amount;
 };
 
+<<<<<<< HEAD
 // const hamburger = document.getElementById("hamburger");
 // const navLinks = document.getElementById("navLinks");
 
@@ -87,3 +88,26 @@ let calculate = () => {
 function toggleMenu() {
   document.getElementById("mobileMenu").classList.toggle("active");
 }
+=======
+ const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", (e) => {
+  e.stopPropagation();
+  navLinks.classList.toggle("active");
+});
+
+document.addEventListener("click", (e) => {
+  if (!navLinks.contains(e.target)) {
+    navLinks.classList.remove("active");
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 600) {
+    navLinks.classList.remove("active");
+  }
+});
+
+  
+>>>>>>> 61f753c9788511270752a4e8ef6b62df558ea531
